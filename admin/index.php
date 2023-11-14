@@ -45,7 +45,7 @@ if ($db->connect_error) {
                              <span class="info-box-number"><?php echo $user_count; ?></span>
         </div>
 		<div class="info-box-content  bg-aqua">
-          <span class="info-box-text"><a href="user.php" style="color:#fff;">View All Users <i class="fa fa-arrow-circle-right"></i></a></span>
+          <span class="info-box-text"><a href="users.php" style="color:#fff;">View All Users <i class="fa fa-arrow-circle-right"></i></a></span>
         </div>
       </div>
     </div>
