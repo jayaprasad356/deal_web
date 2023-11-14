@@ -1,0 +1,41 @@
+
+Options -Indexes -MultiViews
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} !\.(?:css|js|jpg|gif|png)$ [NC]
+
+RewriteRule  ^category/(.*)$/?$     category.php?slug=$1   [NC,L]
+RewriteRule  ^page/(.*)$/?$      page.php?slug=$1      [NC,L]
+RewriteRule  ^swiftcode/(.*)$/?$      swiftcode.php?slug=$1      [NC,L]
+RewriteRule  ^branch/(.*)$/?$      branch.php?slug=$1      [NC,L]
+RewriteRule  ^ifsccode/(.*)$/?$      ifsccode.php?slug=$1      [NC,L]
+RewriteRule  ^micrcode/(.*)$/?$      micrcode.php?slug=$1      [NC,L]
+RewriteRule  ^pincode/(.*)/?$ pincode.php?state=$1 [QSA]
+RewriteRule  ^news/(.*)$/?$      news.php?slug=$1      [NC,L]
+RewriteRule ^news/?$ blogs.php [L]
+RewriteRule ^search/?$ search.php [L]
+RewriteRule ^ifsc-search/?$ ifsc-search.php [L]
+RewriteRule ^pin-search/?$ pin-search.php [L]
+RewriteRule ^swift-search/?$ swift-search.php [L]
+RewriteRule ^sitemap\.xml/?$ sitemap.php
+RewriteRule ^blog-sitemap\.xml/?$ blog-sitemap.php
+RewriteRule ^news-sitemap\.xml/?$ news-sitemap.php
+RewriteRule ^category-sitemap\.xml/?$ category-sitemap.php
+RewriteRule ^pin-sitemap-([0-9]+).xml$ pin-sitemap.php?page=$1 [QSA,L]
+RewriteRule ^office-sitemap-([0-9]+).xml$ office-sitemap.php?page=$1 [QSA,L]
+RewriteRule ^ifsc-sitemap-([0-9]+).xml$ ifsc-sitemap.php?page=$1 [QSA,L]
+RewriteRule ^bank-sitemap-([0-9]+).xml$ bank-sitemap.php?page=$1 [QSA,L]
+RewriteRule ^micr-sitemap-([0-9]+).xml$ micr-sitemap.php?page=$1 [QSA,L]
+RewriteRule ^micrcode-sitemap-([0-9]+).xml$ micrcode-sitemap.php?page=$1 [QSA,L]
+RewriteRule ^swift-sitemap-([0-9]+).xml$ swift-sitemap.php?page=$1 [QSA,L]
+RewriteRule ^swiftcode-sitemap-([0-9]+).xml$ swiftcode-sitemap.php?page=$1 [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(.+) - [PT,L]
+
+RewriteRule ^(.*)/(.*)/(.*)/(.*)/?$ index.php?bank=$1&state=$2&district=$3&branch=$4 [QSA,L]
+RewriteRule ^(.*)/(.*)/(.*)/?$ index.php?bank=$1&state=$2&district=$3 [QSA,L]
+RewriteRule ^(.*)/(.*)/?$ index.php?bank=$1&state=$2 [QSA,L]
+RewriteRule ^(.*)/?$ index.php?bank=$1 [QSA,L]
+
+
