@@ -9,13 +9,13 @@ date_default_timezone_set('Asia/Kolkata');
 $dbhost = 'localhost';
 
 // Database Name
-$dbname = 'deal';
+$dbname = 'u762811021_deal';
 
 // Database Username
-$dbuser = 'root';
+$dbuser = 'u762811021_deal';
 
 // Database Password
-$dbpass = '';
+$dbpass = 'Deal@2023';
 
 // Defining base url
 define("BASE_URL", "https://ifscfinder.in/");
