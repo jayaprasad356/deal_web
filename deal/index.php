@@ -1,6 +1,21 @@
 <?php require_once('header.php'); ?>
+
 <?php
-include("../config/config.php");
+
+
+// Define your database connection parameters
+$servername = "localhost";
+$username = "u762811021_deal";
+$password = "Deal@2023";
+$database = "u762811021_deal";
+
+// Create a database connection
+$db = new mysqli($servername, $username, $password, $database);
+
+// Check the connection
+if ($db->connect_error) {
+    die("Connection failed: " . $db->connect_error);
+}
 ?>
 <section class="content-header">
   <h1>Dashboard</h1>

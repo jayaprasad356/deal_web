@@ -108,7 +108,7 @@ $cur_page = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+
 			          </a>
 			        </li>
 					<li class="treeview <?php if( ($cur_page == 'user-add.php')||($cur_page == 'user-edit.php')||($cur_page == 'user.php') ) {echo 'active';} ?>">
-			          <a href="user.php">
+			          <a href="users.php">
 			            <i class="fa fa-users"></i> <span>User</span>
 			          </a>
 			        </li>
